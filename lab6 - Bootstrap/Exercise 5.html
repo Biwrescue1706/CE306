@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5: Horizontal Radio Buttons with Icons</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    
+    <style>
+        .custom-radio-group {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .custom-radio-group label {
+            font-size: 2em;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .custom-radio-group input[type="radio"] {
+            display: none;
+        }
+
+        .custom-radio-group input[type="radio"]:checked + label {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Exercise 5: Horizontal Radio Buttons Group with Custom Icons</h2>
+        <h3 class="text-center">Choose an Option</h3>
+        <form>
+            <div class="custom-radio-group form-group">
+                <!-- Using Font Awesome Icons -->
+                <input type="radio" name="rating" id="lavel1" value="1">
+                <label for="lavel1"><i class="fas fa-car"></i></label>
+                
+                <input type="radio" name="rating" id="lavel2" value="2">
+                <label for="lavel2"><i class="fas fa-bicycle"></i></label>
+            
+                <input type="radio" name="rating" id="lavel3" value="3">
+                <label for="lavel3"><i class="fas fa-bus"></i></label>
+
+                <input type="radio" name="rating" id="lavel4" value="4">
+                <label for="lavel4"><i class="fas fa-plane"></i></label>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary mt-4 mb-2">
+        </form>
+</body>
+
+</html>

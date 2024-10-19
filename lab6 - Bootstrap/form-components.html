@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-components</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot">
+    <style>
+        .star-rating {
+            direction: rtl;
+            display: flex;
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2em;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .star-rating input[type="radio"]:checked~label {
+            color: green;
+        }
+
+        .custom-radio-group {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .custom-radio-group label {
+            font-size: 2em;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .custom-radio-group input[type="radio"] {
+            display: none;
+        }
+
+        .custom-radio-group input[type="radio"]:checked+label {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="containne-gluid">
+        <h1>form-components</h1>
+        <form>
+            <label for="test1">
+                <span id="t1">$50</span>
+            </label>
+            <input type="range" name="test1" id="test1" value="50"
+                oninput="document.getElementById('t1').textContent = '$' + this.value">
+        </form>
+    </div>
+    <input type="submit" value="OK" class="btn btn-primary">
+    <br>
+    <br>
+    <hr>
+    <form>
+        <div class="star-rating form-group">
+            <input type="radio" name="rating" id="lavel1" value="1">
+            <label for="lavel1">&#9829;</label>
+            <input type="radio" name="rating" id="lavel2" value="2">
+            <label for="lavel2">&#9829;</label>
+            <input type="radio" name="rating" id="lavel3" value="3">
+            <label for="lavel3">&#9829;</label>
+            <input type="radio" name="rating" id="lavel4" value="4">
+            <label for="lavel4">&#9829;</label>
+            <input type="radio" name="rating" id="lavel5" value="5">
+            <label for="lavel5">&#9829;</label>
+            <br>
+        </div>
+        <input type="submit" value="OK" class="btn btn-primary mt-4 mb-2">
+    </form>
+    <br>
+    <br>
+    <hr>
+    <form>
+        <div class="custom-radio-group form-group">
+            <input type="radio" name="rating" id="lavel1" value="1">
+            <label for="lavel1"><i class="fas fa-car"></i></label>
+            <input type="radio" name="rating" id="lavel2" value="2">
+            <label for="lavel2">&#9829;</label>
+            <br>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary mt-4 mb-2">
+    </form>
+</body>
+
+</html>

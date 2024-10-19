@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Product Filter</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Exercise 2: Product Filter Form Using Radio Buttons and Range Sliders</h2>
+        <h3 class="text-center">Product Filter</h3>
+        <form>
+            <!-- Category Selection -->
+            <div class="mb-3">
+                <label class="form-label">Category</label><br>
+                <input type="radio" id="electronics" name="category" value="Electronics"> 
+                <label for="electronics">Electronics</label><br>
+
+                <input type="radio" id="clothing" name="category" value="Clothing"> 
+                <label for="clothing">Clothing</label><br>
+
+                <input type="radio" id="books" name="category" value="Books"> 
+                <label for="books">Books</label>
+            </div>
+
+            <!-- Price Range Slider -->
+            <div class="mb-3">
+                <label for="price">
+                    <span id="price1">Price: $50</span>
+                </label>
+                <input type="range" class="form-range" id="price1" min="0" max="150" value="50"
+                    oninput="document.getElementById('price1').textContent = 'Price: $' + this.value">
+            </div>
+
+            <!-- Filter Button -->
+            <button type="submit" class="btn btn-primary">Filter Products</button>
+        </form>
+    </div>
+</body>
+
+</html>

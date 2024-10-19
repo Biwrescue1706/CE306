@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Range Slider (Min-Max)</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Exercise 4: Range Slider with Two Inputs for Min and Max Value</h2>
+        <h3 class="text-center">Select Range (Min-Max)</h3>
+        <form>
+            <div class="mb-3">
+                <label for="minValue" class="form-label">Minimum Value: 10</label>
+                <input type="range" class="form-range" id="minValue" min="10" max="100">
+            </div>
+            <div class="mb-3">
+                <label for="maxValue" class="form-label">Maximum Value: 50</label>
+                <input type="range" class="form-range" id="maxValue" min="50" max="100">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Range</button>
+        </form>
+    </div>
+</body>
+</html>

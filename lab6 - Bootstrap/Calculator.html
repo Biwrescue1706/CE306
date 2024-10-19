@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .calculator-container {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Adjusted Memory Buttons */
+        .memory-btn {
+            width: 40px; /* Smaller width */
+            margin: -5px 40px -5px 5px;
+            font-size: 10px; /* Smaller font size */
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        .memory-btn:hover {
+            background-color: #e6b800;
+        }
+
+        .form-control {
+            text-align: right;
+            font-size: 32px;
+            height: 70px;
+            margin-bottom: 25px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s, background-color 0.2s, box-shadow 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: #e8e8e8;
+        }
+
+        .btn-light {
+            background-color: #f7f7f7;
+        }
+
+        .btn-equal {
+            grid-column: span 1;
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-equal:hover {
+            background-color: #218838;
+        }
+
+        .btn-blue {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background-color: #0069d9;
+        }
+
+        .grid-container button:nth-child(4n) {
+            background-color: #ff6347;
+            color: white;
+        }
+
+        .grid-container button:nth-child(4n):hover {
+            background-color: #ff4b2b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container calculator-container">
+        <div class="form-group">
+            <input type="text" class="form-control" id="calculator-display" value="0" disabled>
+        </div>
+
+        <!-- Memory Buttons Row (Smaller) -->
+        <div class="memory-buttons d-flex justify-content-between">
+            <button class="btn memory-btn">MC</button>
+            <button class="btn memory-btn">MR</button>
+            <button class="btn memory-btn">M+</button>
+            <button class="btn memory-btn">M-</button>
+            <button class="btn memory-btn">MS</button>
+        </div>
+
+        <!-- Main Calculator Buttons -->
+        <div class="grid-container">
+            <!-- Functional Buttons -->
+            <button class="btn btn-light">%</button>
+            <button class="btn btn-light">CE</button>
+            <button class="btn btn-light">C</button>
+            <button class="btn btn-light">del</button>
+
+            <!-- Scientific Operations -->
+            <button class="btn btn-light">1/x</button>
+            <button class="btn btn-light">x²</button>
+            <button class="btn btn-light">sqrt(x)</button>
+            <button class="btn btn-light">÷</button>
+
+            <!-- Number and Operation Buttons -->
+            <button class="btn btn-light">7</button>
+            <button class="btn btn-light">8</button>
+            <button class="btn btn-light">9</button>
+            <button class="btn btn-light">*</button>
+
+            <button class="btn btn-light">4</button>
+            <button class="btn btn-light">5</button>
+            <button class="btn btn-light">6</button>
+            <button class="btn btn-light">-</button>
+
+            <button class="btn btn-light">1</button>
+            <button class="btn btn-light">2</button>
+            <button class="btn btn-light">3</button>
+            <button class="btn btn-light">+</button>
+
+            <button class="btn btn-light">±</button>
+            <button class="btn btn-light">0</button>
+            <button class="btn btn-light">.</button>
+
+            <!-- Equal Button -->
+            <button class="btn btn-blue btn-equal">=</button>
+        </div>
+    </div>
+
+    <!-- Font Awesome for Backspace Icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        document.getElementById('calculator-display').addEventListener('input', function () {
+            if (this.value === '') {
+                this.value = '0'; // Prevent empty input
+            }
+        });
+    </script>
+
+</body>
+
+</html>

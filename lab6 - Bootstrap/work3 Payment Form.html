@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 3</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Workshop 3: Payment Form with Input Groups</h1>
+        <form>
+            <h2 class="text-center">Payment Form</h2>
+            <div class="mb-3">
+                <label for="cardholderName" class="form-label">Cardholder Name</label>
+                <input type="text" class="form-control" id="cardholderName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9123 4567">
+            </div>
+            <div class="mb-3">
+                <label for="expirationDate" class="form-label">Expiration Date</label>
+                <input type="month" class="form-control" id="expirationDate" placeholder="--------- ----">
+            </div>
+            <div class="mb-3">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv" placeholder="123">
+            </div>
+            <div class="mb-3">
+                <label for="billingAddress" class="form-label">Billing Address</label>
+                <textarea class="form-control" id="billingAddress" placeholder="Enter your billing address"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>

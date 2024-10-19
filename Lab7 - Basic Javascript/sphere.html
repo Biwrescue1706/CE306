@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere</title>
+    <script>
+        const PI = 3.14159; // กำหนดค่าของ Pi เป็น 3.14159
+        // รับค่ารัศมีจากผู้ใช้
+        const radius = prompt("Enter the radius of the sphere (in meters):");
+        
+        const r3 = radius * radius * radius; // คำนวณ r^3
+        const volume = (4 * PI * r3) / 3; // ใช้สูตร V = (4/3)πr³
+        // แสดงผลลัพธ์ใน console
+        console.log(`Volume of the sphere with radius ${radius} is: ${volume.toFixed(4)}`);
+    </script>
+</head>
+<body>
+    <h1>Calculate Volume of Sphere</h1>
+</body>
+</html>

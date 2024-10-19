@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 5</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <h1>Workshop 5: User Profile Form</h1>
+            <form>
+                <h2 class="text-center">User Profile</h2>
+                <div class="mb-1">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="mb-1">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="mb-1">
+                    <label for="profilePicture" class="form-label">Profile Picture</label>
+                    <input type="file" class="form-control" id="profilePicture">
+                </div>
+                <div class="mb-1">
+                    <label for="bio" class="form-label">Bio</label>
+                    <textarea class="form-control" id="bio" placeholder="Tell us about yourself..."></textarea>
+                </div>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="newsletter">
+                    <label class="form-check-label" for="newsletter">Receive Newsletter</label>
+                </div>
+                <button type="submit" class="btn btn-success">Save Profile</button>
+            </form>
+        </div>
+</body>
+</html>

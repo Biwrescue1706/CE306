@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid with Overflow</title>
+    <style>
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .large {
+            width: 160px;
+            height: 160px;
+        }
+
+        /* Row 1: Content-box */
+        .row1 {
+            box-sizing: content-box;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+        }
+
+        /* Row 2: Border-box */
+        .row2 {
+            box-sizing: border-box;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 3px dashed #888;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Row 3: Content-box with Overflow Auto */
+        .row3 {
+            box-sizing: content-box;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #666;
+            box-shadow: inset 0 0 10px #000;
+            height: 250px; /* Fixed height for scrolling */
+        }
+
+        .row3 .overflow1 {
+            overflow: hidden; /* Scroll when needed */
+            height: 100%; /* Fill the available height */
+            display: flex;
+            gap: 10px;
+        }
+
+        .row3 .overflow1 .item {
+            width: 400px; /* Adjust to fit the image */
+            height: 400px; /* Adjust to fit the image */
+        }
+
+        .row3 .overflow2 {
+            overflow: auto; /* Scroll when needed */
+            height: 100%; /* Fill the available height */
+            display: flex;
+            gap: 10px;
+        }
+
+        .row3 .overflow2 .item {
+            width: 400px; /* Adjust to fit the image */
+            height: 400px; /* Adjust to fit the image */
+        }
+
+        /* Row 4: Border-box with Overflow Scroll */
+        .row4 {
+            box-sizing: border-box;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 2px solid #444;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+            height: 300px; /* Fixed height for scrolling */
+        }
+
+        .row4 .overflow3 {
+            overflow: scroll; /* Always show scrollbar */
+            height: 100%; /* Fixed height for scrolling */
+            display: flex;
+            gap: 10px;
+        }
+
+        .row4 .overflow3 .item {
+            width: 300px; /* Adjust to fit the image */
+            height: 300px; /* Adjust to fit the image */
+        }
+
+        .row4 .overflow4 {
+            overflow: visible ; /* Always show scrollbar */
+            height: 100%; /* Fixed height for scrolling */
+            display: flex;
+            gap: 10px;
+        }
+
+        .row4 .overflow4 .item {
+            width: 300px; /* Adjust to fit the image */
+            height: 300px; /* Adjust to fit the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!-- Row 1: Content-box -->
+        <div class="row row1">
+            <div class="item large">
+                <img src="13.jpg" alt="Image 1">
+            </div>
+            <div class="item large">
+                <img src="16.jpg" alt="Image 2">
+            </div>
+            <div class="item large">
+                <img src="3.jpg" alt="Image 3">
+            </div>
+            <div class="item large">
+                <img src="4.jpg" alt="Image 4">
+            </div>
+        </div>
+
+        <!-- Row 2: Border-box -->
+        <div class="row row2">
+            <div class="item large">
+                <img src="5.jpg" alt="Image 5">
+            </div>
+            <div class="item large">
+                <img src="9.jpg" alt="Image 6">
+            </div>
+            <div class="item large">
+                <img src="7.jpg" alt="Image 7">
+            </div>
+            <div class="item large">
+                <img src="8.jpg" alt="Image 8">
+            </div>
+        </div>
+
+        <!-- Row 3: Content-box with Overflow Auto -->
+        <div class="row row3">
+            <div class="overflow1">
+                <div class="item large">
+                    <img src="14.jpg" alt="Image 9">
+                </div>
+                <div class="item large">
+                    <img src="10.jpg" alt="Image 10">
+                </div>
+            </div>
+            <div class="overflow2">
+                <div class="item large">
+                    <img src="1.jpg" alt="Image 11">
+                </div>
+                <div class="item large">
+                    <img src="6.jpg" alt="Image 12">
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4: Border-box with Overflow Scroll -->
+        <div class="row row4">
+            <div class="overflow3">
+                <div class="item large">
+                    <img src="12.jpg" alt="Image 13">
+                </div>
+                <div class="item large">
+                    <img src="15.jpg" alt="Image 14">
+                </div>
+            </div>
+            <div class="overflow4">
+                <div class="item large">
+                    <img src="11.jpg" alt="Image 15">
+                </div>
+                <div class="item large">
+                    <img src="2.jpg" alt="Image 16">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

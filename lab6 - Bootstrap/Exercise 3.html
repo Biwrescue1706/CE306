@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Customer Feedback</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .star-rating {
+          direction: rtl;
+          display: flex;
+        }
+        .star-rating input[type="radio"] {
+          display: none;
+        }
+        .star-rating label {
+          font-size: 2em;
+          color: gray;
+          cursor: pointer;
+        }
+        .star-rating input[type="radio"]:checked ~ label {
+          color: green;
+        }
+      </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mt-5">Exercise 3: Customer Feedback Form with Star Rating</h1>
+        <h2 class="text-center">Customer Feedback</h2>
+        <label>Rate Us:</label>
+        <form class="text-center">
+            
+            <div class="star-rating form-group">
+                <input type="radio" name="rating" id="label5" value="5">
+                <label for="label5">&#9733;</label>
+                <input type="radio" name="rating" id="label4" value="4">
+                <label for="label4">&#9733;</label>
+                <input type="radio" name="rating" id="label3" value="3">
+                <label for="label3">&#9733;</label>
+                <input type="radio" name="rating" id="label2" value="2">
+                <label for="label2">&#9733;</label>
+                <input type="radio" name="rating" id="label1" value="1">
+                <label for="label1">&#9733;</label>
+            </div>
+        </form>
+        <div class="mb-3">
+                    <label for="feedback" class="form-label">Additional Feedback</label>
+                    <textarea class="form-control" id="feedback" rows="4" placeholder="Your feedback"></textarea>
+                </div>
+        <input type="submit" value="OK" class="btn btn-primary mt-4 mb-2">
+    </div>
+</body>
+
+</html>

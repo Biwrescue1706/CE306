@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Multi-Range Form</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Exercise 1: Multi-Range Form with Bootstrap Sliders</h2>
+        <h3 class="text-center">Multi-Range Selection Form</h3>
+        <form>
+            <div class="mb-3">
+                <label for="priceRange" class="form-label">Price Range: $500</label>
+                <input type="range" class="form-range" id="priceRange" min="0" max="1000" step="1">
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating: 5</label>
+                <input type="range" class="form-range" id="rating" min="1" max="10">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age: 30</label>
+                <input type="range" class="form-range" id="age" min="0" max="100">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Upload Form</title>
+</head>
+<body>
+    <h2>Upload From</h2>
+    <form action="/upload_file" method="post" enctype="multipart/form-data">
+        <label for="file">Choose file to Upload</label>
+        <input type="file" name="file" id="file" required accept=".jpg, .png , .pdf">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

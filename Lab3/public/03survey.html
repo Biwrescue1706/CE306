@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Survery Form</title>
+</head>
+<body>
+    <h2>Survey Form</h2>
+    <form action="/submit_survey" method="post">
+        <label for="age">Age Group: </label>
+        <select name="age" id="age">
+            <option value="under_18">Under 18</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55-64">55-64</option>
+            <option value="65_over">65 and over</option>
+        </select>
+        <br><br>
+
+        <label>Gender: </label> <br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other">Other</label><br><br>
+
+        <label for="satisfaction">How satisfied are you? </label><br>
+        <input type="radio" name="satisfaction" id="very_satisfied" value="very_satisfied">
+        <label for="very_satisfied">Very satisfied</label><br>
+        <input type="radio" name="satisfaction" id="satisfied" value="satisfied">
+        <label for="satisfied">Satisfied</label><br>
+        <input type="radio" name="satisfaction" id="neutral" value="neutral">
+        <label for="neutral">Neutral</label><br>
+        <input type="radio" name="satisfaction" id="dissatisfied" value="dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label><br>
+        <input type="radio" name="satisfaction" id="very_dissatisfied" value="very_dissatisfied">
+        <label for="very_dissatisfied">Very Dissatisfied</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
