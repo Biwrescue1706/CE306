@@ -1,0 +1,48 @@
+HTTP status code
+
+XXX
+2XX -> ok /success
+3XX -> Redirection
+4XX -> Permission /Error
+	- 404 Page not found
+	- 401 Access denied/Authentication Error
+5XX -> Internal Error (backend Error)
+
+Atrithmetic Expreaaion นิพจน์เชิงคณิตศาสตร์
+
+Assignment กำหนดค่า
+
+Operator Precedence เท่ากัน ทำจากซ้ายไปขวา
+() สำคัญกว่า
+** ยกกำลังสำคัญมากที่สุด
+*
+/
+%
++
+-
+
+=== คือ
+
+for (initialization; test-condition; iteration-statement){
+Statement(1) 
+. . .
+Statement(n) 
+}
+1.initialization;  #Round 1 
+- - - 
+2.test-condition;
+3.Statement1 -> Statement n
+4.iteration-statement
+- - - 
+5.test-condition;  # (true) Round 2
+6.Statement1 -> Statement n
+7.iteration-statement
+- - - 
+8.test-condition;  # (false) end
+
+while (true){
+
+}
+for ( ; ; ){
+
+}
