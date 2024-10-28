@@ -61,4 +61,7 @@ obj1.z.c (3)
 
 cosnt str1 = "x" , str2 = "y";
 
-obj1
+obj1[src1] (obj1["x"] ==> 1)
+obj1[src2] (obj1["y"] ==> 2)
+
+

@@ -1,4 +1,4 @@
-const here = {
+const hero = {
     name : "My Hero",
     level: 20,
     coins: 2000,
@@ -31,3 +31,25 @@ const here = {
         }
     }
 };
+
+
+if("machinegun" in hero ['weapons']){
+    console.log('Lucky you goy machine gun');
+}
+if(hero["weapons"].hasOwnProperty ('sword')){
+    console.log('You get sword');
+}else{
+    console.log('You get no sword');
+}
+delete hero['weapons']["sword"];
+if (hero["weapons"].hasOwnProperty('sword')){
+    console.log('You get sword');
+}else{
+    console.log('You get no sword');
+}
+
+let s = JSON.stringify(hero)
+console.log(s)
+
+let p = JSON.parse(s)
+console.log(p)
