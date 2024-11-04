@@ -98,3 +98,19 @@ let a = new Array(5, 4, 3, 2, 1, "testing, testing");
 Array.of() // => []; returns empty array with no arguments
 Array.of(10) // => [10]; can create arrays with a single numeric argumentArray.of(1,2,3) // => [1, 2, 3]
 
+const ar = [2,4,6,88]
+for(let i = 0 ; i <= ar.length - 1 , i++)
+for(let i = 0 ; i <= ar.length , i++){
+	console.log(ar[i]);
+}
+2
+4
+6
+8
+for(let i = ar.length - 1 ; i >=0 , i++){
+	console.log(ar[i]);
+}
+8
+6
+4
+2
