@@ -77,7 +77,24 @@ undef[0] , undef[1] , undef[2] =>undefined
 typeof undef[0] == 'undefined' => true
 typeof count[0] == 'undefined' => flase
 
-const a = [1,2,3]
+const a = [1,2,3];
 const b = a;
 b[0] = 4;
 a[0] = 4;
+
+const a = [1,2,3];
+const b = [a]   != [...a]
+
+function func1 (a,b,c){
+
+}
+func1 (a[0] , a[1]  , a[2] );
+func(..a);
+
+let a = new Array();
+let cars = new Array(20); // array with 20 elements
+let a = new Array(5, 4, 3, 2, 1, "testing, testing");
+
+Array.of() // => []; returns empty array with no arguments
+Array.of(10) // => [10]; can create arrays with a single numeric argumentArray.of(1,2,3) // => [1, 2, 3]
+
