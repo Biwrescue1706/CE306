@@ -9,7 +9,7 @@ function ContactForm() {
       <div className="mb-3">
         <FormInput forName="name" label="Name" type="text"/>
         <FormInput forName="email" label="email" type="email"/>
-        <FormTextArea forName="Me" label="email" type="text"/>
+        <FormTextArea forName="Me" label="text" type="text"/>
 
       </div>
       <button type="submit" className="btn btn-primary">Submit</button>
