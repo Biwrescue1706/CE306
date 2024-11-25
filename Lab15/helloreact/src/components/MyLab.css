@@ -1,0 +1,13 @@
+/* helloreact/src/components/Mylab */
+
+.MyLab {
+    color: red;
+}
+
+.MyLab h1 {
+    font-size: larger;
+}
+
+.MyLab p {
+    font-weight: bold;
+}
