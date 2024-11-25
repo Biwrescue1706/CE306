@@ -1,9 +1,15 @@
+//helloreact/src/Mylab
 import React from "react";
+import  './Mylab.css';
 
-//function component
-const MyApp = () => {
-    return <h1>This is my App</h1>;
-
+const Mylab = (props) => {
+    return (
+        <>
+            <h1 className="MyLab">This is my App</h1>
+            <p>Hello my Name is {props.name || "Guest"}</p>
+            <p>I'm {props.age || "unknown"} years old</p>
+        </>
+    );
 };
 
-export default MyApp;
+export default Mylab;

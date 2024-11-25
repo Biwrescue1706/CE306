@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 // import App from './App';
-// import MyApp from './Mylab';
-import Phuwanat from './Phuwanat';
+import Mylab from './Mylab';
+// import Phuwanat from './Phuwanat';
 import reportWebVitals from './reportWebVitals';
+// import MyApp from './MyApp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Phuwanat />
+    <Mylab name="John" age={23} />
+    <Mylab name="Jane" age={30} />
+    <Mylab name="Doe" age={28} />
+    <Mylab name="Guest" age={20} />
   </React.StrictMode>
 );
 
