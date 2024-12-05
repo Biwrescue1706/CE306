@@ -20,11 +20,12 @@ function max() {
     return maxValue;
 }
 
-// console.log("Minimum : ", min(4, 7, 1, 8, 2, 9));
-// console.log("Minimum : ", min(10, 20, 30, 40, 50, 5));
-// console.log("Minimum : ", min(15, -3, 27, 99, 14, 0));
-// console.log("Minimum : ", min(100, 54, 23, 11, 87, 76));
-// console.log("Minimum : ", min(-5, -10, -1, -8, -2, -3));
+console.log("Minimum : ", min(4, 7, 1, 8, 2, 9));
+console.log("Minimum : ", min(10, 20, 30, 40, 50, 5));
+console.log("Minimum : ", min(15, -3, 27, 99, 14, 0));
+console.log("Minimum : ", min(100, 54, 23, 11, 87, 76));
+console.log("Minimum : ", min(-5, -10, -1, -8, -2, -3));
+console.log("-----------------");
 
 console.log("Maximum : ", max(4, 7, 1, 8, 2, 9));
 console.log("Maximum : ", max(10, 20, 30, 40, 50, 5));
